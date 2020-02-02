@@ -9,6 +9,7 @@ import java.util.Properties;
  * @date : 2020/2/2
  * @description : 带回调函数的生产者
  */
+@SuppressWarnings("all")
 public class CallBackProducer {
 
     public static void main(String[] args) {
