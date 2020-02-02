@@ -22,7 +22,7 @@ public class CallBackProducer {
         KafkaProducer<String, String> kafkaProducer = new KafkaProducer<String, String>(properties);
         //3.发送数据(带回调函数发送数据)
         for (int i = 0; i < 100; i++) {
-            kafkaProducer.send(new ProducerRecord<String, String>("first", "测试value" + i), new Callback() {
+            kafkaProducer.send(new ProducerRecord<String, String>("first",0,"测试数据","测试value" + i), new Callback() {
                 public void onCompletion(RecordMetadata metadata, Exception exception) {
                     //不出现异常
                     if(exception == null){
